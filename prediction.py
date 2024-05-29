@@ -1,13 +1,11 @@
 # prediction.py
 
 import joblib
-from cleaning import clean_text  # Eklememiz gereken satır
+from cleaning import clean_text
 
 
 def load_model_and_predict(test_texts, model_file, vectorizer_file, label_encoder_file):
-    """
-    Loads the model and makes predictions on new data.
-    """
+
     model = joblib.load(model_file)
     vectorizer = joblib.load(vectorizer_file)
     label_encoder = joblib.load(label_encoder_file)
